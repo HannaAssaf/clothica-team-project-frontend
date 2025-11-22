@@ -1,0 +1,277 @@
+/* Unreadable piece of that you know I did */
+
+.container {
+	color: var(--color-scheme-1-text);
+	margin-top: 64px;
+	margin-bottom: 176px;
+}
+.image {
+	border-radius: 16px;
+	margin-bottom: 48px;
+}
+.categorySection {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: 8px;
+	margin-bottom: 24px;
+	font-size: 14px;
+	line-height: 150%;
+}
+.categorySection > p {
+	font-weight: 600;
+}
+.chevron {
+	transform: scaleX(-1);
+	flex-shrink: 0;
+}
+.h1 {
+	font-weight: inherit;
+	font-size: 32px;
+	line-height: 120%;
+	letter-spacing: -0.01em;
+	margin-bottom: 24px;
+}
+.priceAndRate {
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+}
+.price {
+	font-family: var(--font-nunito-sans);
+	font-size: 20px;
+	line-height: 140%;
+	letter-spacing: -0.01em;
+}
+.price::after {
+	content: "";
+	height: 100%;
+	border-right: solid 1px var(--color-scheme-1-border);
+	margin-left: 15.5px;
+	margin-right: 15.5px;
+}
+.stars {
+	display: flex;
+	align-items: center;
+	margin-right: 8px;
+}
+.rate {
+	font-size: 14px;
+	line-height: 150%;
+}
+.prevDescription {
+	line-height: 150%;
+	margin-bottom: 24px;
+}
+.form {
+	line-height: 150%;
+	margin-bottom: 16px;
+}
+.groupedGroups {
+	display: flex;
+	column-gap: 16px;
+	margin-bottom: 16px;
+}
+.fieldGroup:has(> select[name="size"]) {
+	margin-bottom: 24px;
+}
+.fieldGroup:has(> .radioButtons) {
+	margin-bottom: 32px;
+}
+.fieldGroup:has(> input[name="amount"]) {
+	width: 64px;
+}
+.fieldGroup > * {
+	line-height: inherit;
+	display: block;
+}
+.fieldGroup > *:not(:last-child) {
+	margin-bottom: 8px;
+}
+.fieldGroup > select[name="size"],
+.fieldGroup > input[name="amount"] {
+	border: 1px solid var(--opacity-neutral-darkest-15);
+	border-radius: 16px;
+	padding: 8px;
+	width: 100%;
+	background: transparent;
+}
+.fieldGroup > select[name="size"][name="size"],
+.fieldGroup > input[name="amount"][name="size"] {
+	appearance: none;
+	color: var(--color-neutral-darkest);
+	cursor: pointer;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="black" fill-opacity=".6" d="M12 15.202a.814.814 0 0 1-.603-.261L6.453 9.997a.79.79 0 0 1-.242-.61.878.878 0 0 1 .267-.609.831.831 0 0 1 .61-.255c.235 0 .439.085.609.255L12 13.107l4.328-4.329c.17-.17.369-.25.597-.242a.865.865 0 0 1 .596.267c.17.17.255.374.255.61s-.084.439-.255.609l-4.919 4.919a.813.813 0 0 1-.603.261Z" /></svg>');
+	background-repeat: no-repeat;
+	background-position: right 8px center;
+	background-size: 24px;
+}
+.fieldGroup > select[name="size"][name="amount"],
+.fieldGroup > input[name="amount"][name="amount"] {
+	appearance: textfield;
+	width: 64px;
+	transition:
+		color var(--transition),
+		border-color var(--transition);
+}
+.fieldGroup > select[name="size"][name="amount"]::placeholder,
+.fieldGroup > input[name="amount"][name="amount"]::placeholder {
+	color: var(--opacity-neutral-darkest-60);
+}
+.fieldGroup > select[name="size"][name="amount"]:focus,
+.fieldGroup > input[name="amount"][name="amount"]:focus {
+	border-color: var(--color-scheme-1-accent);
+}
+.fieldGroup > select[name="size"][name="amount"]:focus::placeholder,
+.fieldGroup > input[name="amount"][name="amount"]:focus::placeholder {
+	color: transparent;
+}
+.fieldGroup > select[name="size"][name="amount"]:has(+ .error),
+.fieldGroup > input[name="amount"][name="amount"]:has(+ .error) {
+	color: var(--color-red);
+	border-color: var(--color-red);
+}
+.radioButtons {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 16px;
+	row-gap: 8px;
+}
+.radioButtons input {
+	position: fixed;
+	opacity: 0;
+	pointer-events: none;
+}
+.radioButtons input:checked + label,
+.radioButtons label:hover,
+.radioButtons label:hover {
+	color: var(--color-white);
+	border-color: var(--color-neutral-darkest);
+	background: var(--color-neutral-darkest);
+}
+.radioButtons label {
+	cursor: pointer;
+	color: var(--color-neutral-darkest);
+	display: block;
+	border: 1px solid var(--opacity-neutral-darkest-15);
+	border-radius: 4px;
+	padding: 6px 12px;
+	transition:
+		color var(--transition),
+		border-color var(--transition),
+		background var(--transition);
+}
+.error {
+	font-size: 12px;
+	color: var(--color-red);
+	word-wrap: break-word;
+}
+.submit {
+	font-weight: 500;
+	line-height: inherit;
+	color: var(--color-neutral-darkest);
+	border: 1px solid var(--color-deco);
+	border-radius: 100px;
+	width: 100%;
+	height: 36px;
+	cursor: pointer;
+	background: var(--color-deco);
+	transition:
+		border-color var(--transition),
+		color var(--transition),
+		background-color var(--transition);
+}
+.submit:hover,
+.submit:focus {
+	border-color: var(--color-deco-darker);
+	background: var(--color-deco-dark);
+}
+.submit:active {
+	border-color: var(--color-deco);
+	color: var(--color-white);
+	background-color: var(--color-deco-darkest);
+}
+.buyButton {
+	font-weight: 500;
+	line-height: 150%;
+	color: var(--color-neutral-darkest);
+	border: 1px solid var(--opacity-transparent);
+	border-radius: 100px;
+	width: 100%;
+	height: 36px;
+	cursor: pointer;
+	background-color: var(--opacity-neutral-darkest-5);
+	transition:
+		border-color var(--transition),
+		color var(--transition),
+		background-color var(--transition);
+}
+.buyButton:hover,
+.buyButton:focus {
+	border-color: var(--opacity-neutral-darkest-50);
+	background: var(--opacity-neutral-darkest-15);
+}
+.buyButton:active {
+	border-color: var(--opacity-transparent);
+	color: var(--color-white);
+	background-color: var(--opacity-neutral-darkest-50);
+}
+.offer {
+	font-size: 12px;
+	line-height: 150%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.descriptionMenu {
+	line-height: 150%;
+	margin-bottom: 32px;
+}
+.descriptionMenu * {
+	display: inline;
+}
+.descriptionMenu > *:not(:last-child) {
+	margin-right: 24px;
+}
+.descriptionMenu > *:first-child {
+	position: relative;
+}
+.descriptionMenu > *:first-child::before {
+	content: "";
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	right: 0;
+	height: 0;
+	border-top: 1px solid var(--color-scheme-1-accent);
+}
+.description,
+.characteristicsTitle,
+.characteristics {
+	line-height: 150%;
+}
+.characteristics {
+	margin-left: 24px;
+}
+.characteristics li {
+	list-style: disc;
+}
+@media screen and (min-width: 768px) {
+	.container {
+		display: flex;
+		column-gap: 32px;
+	}
+	.image {
+		width: 336px;
+		height: 358px;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.container {
+		margin-top: 112px;
+		margin-bottom: 272px;
+	}
+	.image {
+		width: 640px;
+		height: 682px;
+	}
+}

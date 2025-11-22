@@ -1,0 +1,119 @@
+.subscribe label {
+	display: flex;
+	gap: 16px;
+	margin-top: 24px;
+}
+
+.subscribe input {
+	width: 195px;
+	height: 40px;
+	padding: 0 8px;
+	font-size: 16px;
+	line-height: 1.5;
+	border-radius: 16px;
+	border: 1px solid var(--opacity-neutral-darkest-15);
+	background-color: transparent;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 124px;
+	height: 36px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	border-radius: 100px;
+	cursor: pointer;
+	transition:
+		color var(--transition),
+		background-color var(--transition);
+	background-color: var(--opacity-neutral-darkest-5);
+}
+
+.button:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+	.subscribe label {
+		flex-wrap: wrap;
+	}
+	.subscribe input,
+	.button {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.about {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.links,
+	.subscribe {
+		margin-top: 0;
+	}
+	.links {
+		align-items: flex-start;
+	}
+	.subscribe {
+		max-width: 400px;
+	}
+	.links a {
+		font-size: 12px;
+	}
+	.logo {
+		place-self: flex-start;
+	}
+	.top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+	.subscribe input {
+		width: 273px;
+		height: 37px;
+		font-size: 14px;
+	}
+	.button {
+		width: 111px;
+		height: 33px;
+		font-size: 14px;
+	}
+	.socials svg {
+		width: 24px;
+		height: 24px;
+	}
+	.about span {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.subscribe input {
+		width: 273px;
+		height: 37px;
+		font-size: 14px;
+	}
+	.button {
+		width: 111px;
+		height: 33px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.subscribe input {
+		width: 260px;
+		height: 40px;
+	}
+	.button {
+		width: 124px;
+		height: 36px;
+	}
+}

@@ -1,0 +1,84 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+
+.menu {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 18px 20px;
+	border-radius: 8px;
+	background-color: var(--color-scheme-5-background);
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: var(--mobile-adaptive);
+	margin: 0 auto;
+}
+
+.nav li:last-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 18px;
+}
+
+.closeButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 36px;
+	height: 36px;
+	font-weight: 500;
+	border-radius: 100px;
+	background-color: var(--opacity-neutral-darkest-5);
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 32px;
+	margin-top: 40px;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 36px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	border-radius: 100px;
+}
+
+.login {
+	width: 335px;
+	margin-top: 32px;
+	background-color: var(--opacity-neutral-darkest-5);
+}
+
+.register {
+	width: 335px;
+	margin-top: -16px;
+	background-color: var(--color-deco);
+}
+
+.profile {
+	width: 335px;
+	margin-top: 32px;
+	background-color: var(--color-deco);
+}

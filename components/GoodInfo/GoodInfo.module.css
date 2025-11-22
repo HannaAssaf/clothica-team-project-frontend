@@ -1,0 +1,95 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	place-self: flex-end;
+	width: 122px;
+	height: 36px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	border-radius: 100px;
+	transition:
+		color var(--transition),
+		border-color var(--transition),
+		background-color var(--transition);
+	border: 1px solid transparent;
+	background-color: var(--opacity-neutral-darkest-5);
+}
+
+.button:hover {
+	border-color: var(--opacity-neutral-darkest-50);
+	background-color: var(--opacity-neutral-darkest-15);
+}
+
+.button:active {
+	color: #fff;
+	border-color: transparent;
+	background-color: var(--opacity-neutral-darkest-50);
+}
+
+.details {
+	width: 100%;
+	height: 40px;
+	margin-top: 16px;
+}
+
+.img {
+	width: 335px;
+	height: 412px;
+	border-radius: 16px;
+}
+
+.block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 16px;
+}
+
+.h3 {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-clamp: 1;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	max-width: 210px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.h3 ~ span {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.p {
+	display: flex;
+	align-items: center;
+	gap: 1px;
+}
+
+.p span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1px;
+	margin-left: 12px;
+}
+
+@media screen and (min-width: 768px) {
+	.img {
+		width: 336px;
+		height: 414px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.img {
+		width: 100%;
+		height: 374px;
+	}
+}

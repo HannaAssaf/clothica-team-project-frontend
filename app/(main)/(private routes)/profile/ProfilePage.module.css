@@ -1,0 +1,148 @@
+.h1,
+.h2 {
+	font-family: var(--font-nunito-sans);
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	text-align: center;
+	color: var(--color-scheme-1-text);
+}
+
+.h1 {
+	font-size: 36px;
+	line-height: 120%;
+
+	margin-top: 64px;
+	margin-bottom: 48px;
+}
+
+.cabinetContainer {
+	margin-bottom: 48px;
+}
+
+.h2 {
+	font-size: 20px;
+	line-height: 140%;
+
+	margin-bottom: 24px;
+}
+
+.ordersTitle {
+	margin-bottom: 16px;
+}
+
+.infoContainer {
+	margin-bottom: 32px;
+}
+
+.orders {
+	display: flex;
+	justify-content: space-between;
+}
+
+.order {
+	line-height: 150%;
+	color: var(--color-scheme-1-text);
+
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+}
+
+.date {
+	font-size: 14px;
+}
+
+.orderNum,
+p:has(+ .sum),
+p:has(+ .status) {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.logout {
+	font-weight: 500;
+	line-height: 150%;
+	border: 1px solid var(--opacity-transparent);
+	border-radius: 100px;
+	width: 100%;
+	height: 36px;
+	margin-bottom: 48px;
+	cursor: pointer;
+	background-color: var(--opacity-neutral-darkest-5);
+	transition:
+		border-color var(--transition),
+		color var(--transition),
+		background-color var(--transition);
+}
+
+.logout:hover,
+.logout:focus {
+	border-color: var(--opacity-neutral-darkest-50);
+	background: var(--opacity-neutral-darkest-15);
+}
+
+.logout:active {
+	border-color: var(--opacity-transparent);
+	color: var(--color-white);
+	background-color: var(--opacity-neutral-darkest-50);
+}
+
+@media screen and (max-width: 767px) {
+	.statusGroup {
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) {
+	.orders {
+		justify-content: flex-start;
+		column-gap: 16px;
+
+		& ul:first-child {
+			width: 250px;
+		}
+		& ul:nth-child(2) {
+			width: 200px;
+		}
+	}
+
+	.logout {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin-left: auto;
+		margin-right: auto;
+		padding: 6px 12px;
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.h1 {
+		font-size: 48px;
+
+		margin-top: 112px;
+	}
+
+	.cabinetContainer {
+		display: flex;
+		flex-direction: row-reverse;
+		column-gap: 32px;
+
+		& > div {
+			width: 100%;
+		}
+	}
+
+	.h2 {
+		font-size: 24px;
+	}
+
+	.infoContainer {
+		margin: 0;
+	}
+
+	.logout {
+		margin-bottom: 80px;
+	}
+}

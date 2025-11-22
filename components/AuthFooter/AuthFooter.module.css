@@ -1,0 +1,10 @@
+.footer {
+	padding: 48px 0;
+}
+
+.footer p {
+	display: flex;
+	place-self: center;
+	font-size: 14px;
+	line-height: 1.5;
+}

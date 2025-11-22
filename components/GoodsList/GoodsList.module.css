@@ -1,0 +1,25 @@
+.swiper {
+	margin-top: 40px;
+}
+
+.slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 556px;
+	max-height: 556px;
+}
+
+@media screen and (min-width: 768px) {
+	.slide {
+		min-height: 558px;
+		max-height: 558px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.slide {
+		min-height: 518px;
+		max-height: 518px;
+	}
+}

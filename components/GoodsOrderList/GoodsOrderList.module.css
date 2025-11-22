@@ -1,0 +1,162 @@
+.hr {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: 1px;
+	color: unset;
+	margin-top: 16px;
+	margin-bottom: 14px;
+	background-color: var(--color-scheme-1-border);
+}
+
+.sumBefore,
+.delivery {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.delivery {
+	margin-top: 9px;
+}
+
+.sumBefore,
+.sum {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.sum {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.5;
+	margin-top: 16px;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.name p {
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.name p svg {
+	margin-right: 4px;
+}
+
+.name p span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 12px;
+}
+
+.image {
+	width: 82px;
+	height: 101px;
+	border-radius: 16px;
+}
+
+.good {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	width: 100%;
+}
+
+.good:not(:first-child) {
+	margin-top: 16px;
+}
+
+.priceAmountDelete {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 8px;
+	margin-top: 8px;
+}
+
+.priceAmountDelete p {
+	flex: 1 1 100%;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.priceAmountDelete input {
+	width: 64px;
+	height: 40px;
+	padding: 0 8px;
+	text-align: center;
+	border-radius: 16px;
+	border: 1px solid var(--opacity-neutral-darkest-15);
+	background-color: transparent;
+}
+
+.priceAmountDelete input::-webkit-outer-spin-button,
+.priceAmountDelete input::-webkit-inner-spin-button {
+	display: none;
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.priceAmountDelete button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 100px;
+	border: 1px solid transparent;
+	background-color: var(--opacity-neutral-darkest-5);
+}
+
+.modal {
+	max-height: 434px;
+	overflow-y: auto;
+}
+
+.modal .goodInfo {
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.modal {
+		max-height: 452px;
+	}
+	.goodInfo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+	.priceAmountDelete {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 32px;
+		width: 50%;
+	}
+	.modal .priceAmountDelete {
+		flex-wrap: nowrap;
+		gap: 8px;
+		margin: 0;
+	}
+	.priceAmountDelete p {
+		flex: unset;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.modal .priceAmountDelete {
+		gap: 16px;
+	}
+}

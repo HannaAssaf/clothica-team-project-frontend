@@ -1,0 +1,38 @@
+.list {
+	margin-top: 40px;
+}
+
+.list h3 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.5;
+	margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 32px;
+	}
+	.list li {
+		width: calc((100% - 32px) / 2);
+	}
+	.list img {
+		width: 336px;
+		height: 224px;
+	}
+	.button {
+		width: 158px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.list li {
+		width: calc((100% - 64px) / 3);
+	}
+	.list img {
+		width: 416px;
+		height: 277px;
+	}
+}

@@ -1,0 +1,372 @@
+.h2 {
+	font-family: var(--font-nunito-sans);
+	font-weight: 400;
+	font-size: 36px;
+	letter-spacing: -0.01em;
+	line-height: 120%;
+
+	margin-bottom: 24px;
+}
+
+.openModalButton {
+	font-weight: 500;
+	line-height: inherit;
+	color: var(--color-neutral-darkest);
+	border: 1px solid var(--color-deco);
+	border-radius: 100px;
+	width: 100%;
+	height: 36px;
+	cursor: pointer;
+	background: var(--color-deco);
+	transition:
+		border-color var(--transition),
+		color var(--transition),
+		background-color var(--transition);
+
+	&:hover,
+	&:focus {
+		border-color: var(--color-deco-darker);
+		background: var(--color-deco-dark);
+	}
+
+	&:active {
+		border-color: var(--color-deco);
+		color: var(--color-white);
+		background-color: var(--color-deco-darkest);
+	}
+}
+
+:global(.messageNoInfoGoodReviews) {
+	margin-bottom: 124px;
+}
+
+.sliderButtons {
+	display: flex;
+	justify-content: center;
+	column-gap: 9px;
+
+	margin-top: 50px;
+	margin-bottom: 74px;
+}
+
+.goodFeedbackLeftBtn,
+.goodFeedbackRightBtn {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid var(--color-scheme-1-background);
+	border-radius: 100px;
+	width: 48px;
+	height: 48px;
+
+	background-color: var(--color-scheme-5-foreground);
+
+	transition:
+		opacity var(--transition),
+		border-color var(--transition),
+		background-color var(--transition);
+
+	&:hover,
+	&:focus {
+		border-color: var(--color-deco-darker);
+		background: var(--color-deco-dark);
+	}
+
+	&:active {
+		border-color: var(--color-deco);
+		background-color: var(--color-deco-darkest);
+
+		& svg {
+			fill: var(--color-white);
+		}
+	}
+
+	&:global(.swiper-button-disabled) {
+		cursor: default;
+		opacity: 0.3;
+		border-color: var(--color-scheme-1-background);
+		background-color: var(--color-scheme-5-foreground);
+
+		& svg {
+			fill: var(--color-scheme-1-text);
+		}
+	}
+}
+
+.goodFeedbackRightBtn svg {
+	transform: scaleX(-1);
+
+	transition: fill var(--transition);
+}
+
+:global(.feedbackModal) {
+	max-width: var(--mobile);
+	padding: 40px 20px !important;
+	margin: 0 auto;
+
+	& .cross {
+		cursor: pointer;
+		position: absolute;
+		right: 16px;
+		top: 20.5px;
+	}
+}
+
+.h3 {
+	font-family: var(--font-nunito-sans);
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 120%;
+	letter-spacing: -0.01em;
+	text-align: center;
+	color: var(--color-scheme-1-text);
+
+	margin-bottom: 48px;
+}
+
+.form {
+	line-height: 150%;
+	color: var(--color-scheme-1-text);
+}
+
+.fieldGroup {
+	margin-bottom: 24px;
+
+	& > * {
+		display: block;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	& input[name="author"],
+	& textarea {
+		line-height: inherit;
+		border: 1px solid var(--opacity-neutral-darkest-15);
+		border-radius: 16px;
+		padding: 8px;
+		width: 100%;
+		height: 40px;
+		background: transparent;
+		transition:
+			color var(--transition),
+			border-color var(--transition);
+
+		&::placeholder {
+			color: var(--opacity-neutral-darkest-60);
+		}
+
+		&:focus {
+			border-color: var(--color-scheme-1-accent);
+
+			&::placeholder {
+				color: transparent;
+			}
+		}
+
+		&:has(+ .error) {
+			color: var(--color-red);
+			border-color: var(--color-red);
+		}
+	}
+
+	& textarea {
+		padding: 12px;
+		height: 180px;
+	}
+}
+
+.fieldGroup:has(> .ratingGroup):not(:has(> .error)) {
+	height: 24px;
+}
+
+.ratingGroup {
+	display: inline-block;
+	position: relative;
+
+	&:has(+ .error) {
+		fill: var(--color-red);
+	}
+
+	& input {
+		position: fixed;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	& label {
+		cursor: pointer;
+		display: block;
+		width: 24px;
+		height: 24px;
+	}
+
+	& li {
+		display: block;
+
+		/* To prevent boldness due to layer */
+		&:nth-child(even):not(:has(input:checked)) {
+			fill: none;
+		}
+
+		&:nth-child(2) {
+			position: absolute;
+			left: 24px;
+			top: 0;
+			width: 12px !important;
+			overflow: hidden;
+			z-index: 2;
+		}
+
+		&:nth-child(3) {
+			position: absolute;
+			left: 24px;
+			top: 0;
+		}
+
+		&:nth-child(4) {
+			position: absolute;
+			left: calc(2 * 24px);
+			top: 0;
+			width: 12px !important;
+			overflow: hidden;
+			z-index: 2;
+		}
+
+		&:nth-child(5) {
+			position: absolute;
+			left: calc(2 * 24px);
+			top: 0;
+		}
+
+		&:nth-child(6) {
+			position: absolute;
+			left: calc(3 * 24px);
+			top: 0;
+			width: 12px !important;
+			overflow: hidden;
+			z-index: 2;
+		}
+
+		&:nth-child(7) {
+			position: absolute;
+			left: calc(3 * 24px);
+			top: 0;
+		}
+
+		&:nth-child(8) {
+			position: absolute;
+			left: calc(4 * 24px);
+			top: 0;
+			width: 12px !important;
+			overflow: hidden;
+			z-index: 2;
+		}
+
+		&:nth-child(9) {
+			position: absolute;
+			left: calc(4 * 24px);
+			top: 0;
+		}
+	}
+}
+
+.error {
+	font-size: 12px;
+	color: var(--color-red);
+}
+
+.submit {
+	font-weight: 500;
+	line-height: inherit;
+	color: var(--color-neutral-darkest);
+	border: 1px solid var(--color-deco);
+	border-radius: 100px;
+	width: 100%;
+	height: 36px;
+	cursor: pointer;
+	background: var(--color-deco);
+	transition:
+		border-color var(--transition),
+		color var(--transition),
+		background-color var(--transition);
+
+	&:hover,
+	&:focus {
+		border-color: var(--color-deco-darker);
+		background: var(--color-deco-dark);
+	}
+
+	&:active {
+		border-color: var(--color-deco);
+		color: var(--color-white);
+		background-color: var(--color-deco-darkest);
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+	:global(.feedbackModal) {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 375px) {
+	:global(.feedbackModal) {
+		max-width: calc(var(--mobile-adaptive) - 20px * 2);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.openModalButton,
+	.submit {
+		width: auto;
+		padding: 0 12px;
+	}
+
+	.sliderButtons {
+		justify-content: end;
+		margin-right: 10px;
+	}
+
+	:global(.feedbackModal) {
+		max-width: calc(var(--tablet) - 32px * 2);
+		padding: 40px 64px !important;
+	}
+
+	.submit {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	:global(.messageNoInfoGoodReviews) {
+		margin-bottom: 172px;
+	}
+
+	.sliderButtons {
+		margin-bottom: 122px;
+	}
+
+	:global(.feedbackModal) {
+		max-width: calc(var(--computer) - 336px * 2);
+		padding: 64px !important;
+
+		& .cross {
+			top: 28px;
+			right: 28px;
+		}
+	}
+
+	.h3 {
+		font-size: 48px;
+	}
+}
